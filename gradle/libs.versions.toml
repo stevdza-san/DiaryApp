@@ -1,0 +1,61 @@
+[versions]
+compose = "1.3.1"
+kotlin = "1.7.10"
+core-ktx = "1.9.0"
+lifecycle-runtime = "2.5.1"
+activity-compose = "1.6.1"
+material3-compose = "1.1.0-alpha04"
+junit = "4.13.2"
+junit-ext = "1.1.5"
+espresso = "3.5.1"
+compose-navigation = "2.5.3"
+firebase = "21.1.0"
+room = "2.5.0"
+runtime-compose = "2.6.0-alpha04"
+splash = "1.0.0"
+realm = "1.0.2"
+kotlin-coroutines-core = { strictly = "1.6.0-native-mt" }
+dagger-hilt = "2.44.2"
+hilt-navigation-compose = "1.0.0"
+coil = "2.2.2"
+accompanist = "0.27.0"
+date-time-picker = "1.0.2"
+message-bar-compose = "1.0.5"
+one-tap-compose = "1.0.0"
+desugar = "1.2.0"
+
+[libraries]
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx"}
+lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle-runtime"}
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose"}
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose"}
+compose-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose"}
+material3-compose = { module = "androidx.compose.material3:material3", version.ref = "material3-compose"}
+junit = { module = "junit:junit", version.ref = "junit"}
+junit-ext = { module = "androidx.test.ext:junit", version.ref = "junit-ext"}
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso"}
+compose-ui-test = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose"}
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose"}
+compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose"}
+
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "compose-navigation"}
+firebase-auth = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebase"}
+firebase-storage = { module = "com.google.firebase:firebase-storage-ktx", version.ref = "firebase"}
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "runtime-compose"}
+splash-api = { module = "androidx.core:core-splashscreen", version.ref = "splash"}
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines-core"}
+realm-sync = { module = "io.realm.kotlin:library-sync", version.ref = "realm"}
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger-hilt"}
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger-hilt"}
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-navigation-compose"}
+coil = { module = "io.coil-kt:coil-compose", version.ref = "coil"}
+accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanist"}
+date-time-picker = { module = "com.maxkeppeler.sheets-compose-dialogs:core", version.ref = "date-time-picker"}
+date-dialog = { module = "com.maxkeppeler.sheets-compose-dialogs:calendar", version.ref = "date-time-picker"}
+time-dialog = { module = "com.maxkeppeler.sheets-compose-dialogs:clock", version.ref = "date-time-picker"}
+message-bar-compose = { module = "com.github.stevdza-san:MessageBarCompose", version.ref = "message-bar-compose"}
+one-tap-compose = { module = "com.github.stevdza-san:OneTapCompose", version.ref = "one-tap-compose"}
+desugar-jdk = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar"}
