@@ -9,7 +9,8 @@ junit = "4.13.2"
 junit-ext = "1.1.5"
 espresso = "3.5.1"
 compose-navigation = "2.5.3"
-firebase = "21.1.0"
+firebase-auth = "21.1.0"
+firebase-storage = "20.1.0"
 room = "2.5.0"
 runtime-compose = "2.6.0-alpha04"
 splash = "1.0.0"
@@ -39,8 +40,8 @@ compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = 
 compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose"}
 
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "compose-navigation"}
-firebase-auth = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebase"}
-firebase-storage = { module = "com.google.firebase:firebase-storage-ktx", version.ref = "firebase"}
+firebase-auth = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebase-auth"}
+firebase-storage = { module = "com.google.firebase:firebase-storage-ktx", version.ref = "firebase-storage"}
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }

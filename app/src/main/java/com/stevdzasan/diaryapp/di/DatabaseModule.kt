@@ -2,9 +2,9 @@ package com.stevdzasan.diaryapp.di
 
 import android.content.Context
 import androidx.room.Room
-import com.stevdzasan.diaryapp.connectivity.NetworkConnectivityObserver
-import com.stevdzasan.diaryapp.data.database.ImagesDatabase
-import com.stevdzasan.diaryapp.util.Constants.IMAGES_DATABASE
+import com.example.mongo.database.ImagesDatabase
+import com.example.util.Constants.IMAGES_DATABASE
+import com.example.util.connectivity.NetworkConnectivityObserver
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

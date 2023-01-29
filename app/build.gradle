@@ -15,13 +15,13 @@ android {
         applicationId "com.stevdzasan.diaryapp"
         minSdk ProjectConfig.minSdk
         targetSdk ProjectConfig.targetSdk
-        versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary true
         }
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -119,5 +119,12 @@ dependencies {
 
     // Desugar JDK
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.0'
+
+    implementation(project(":core:ui"))
+    implementation(project(":core:util"))
+    implementation(project(":data:mongo"))
+    implementation(project(":feature:auth"))
+    implementation(project(":feature:home"))
+    implementation(project(":feature:write"))
 
 }
