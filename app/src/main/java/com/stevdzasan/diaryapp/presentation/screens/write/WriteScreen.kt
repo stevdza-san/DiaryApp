@@ -28,7 +28,7 @@ import com.stevdzasan.diaryapp.model.GalleryState
 import com.stevdzasan.diaryapp.model.Mood
 import java.time.ZonedDateTime
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalPagerApi::class)
+@OptIn(ExperimentalPagerApi::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun WriteScreen(
