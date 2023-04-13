@@ -31,8 +31,9 @@ import com.stevdzasan.diaryapp.ui.theme.Elevation
 import com.stevdzasan.diaryapp.util.fetchImagesFromFirebase
 import com.stevdzasan.diaryapp.util.toInstant
 import io.realm.kotlin.ext.realmListOf
-import java.text.SimpleDateFormat
 import java.time.Instant
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 @Composable
@@ -133,6 +134,10 @@ fun DiaryHolder(diary: Diary, onClick: (String) -> Unit) {
 @Composable
 fun DiaryHeader(moodName: String, time: Instant) {
     val mood by remember { mutableStateOf(Mood.valueOf(moodName)) }
+    val formatter = remember {
+        DateTimeFormatter.ofPattern("hh:mm a", Locale.getDefault())
+            .withZone(ZoneId.systemDefault())
+    }
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -155,8 +160,7 @@ fun DiaryHeader(moodName: String, time: Instant) {
             )
         }
         Text(
-            text = SimpleDateFormat("hh:mm a", Locale.US)
-                .format(Date.from(time)),
+            text = formatter.format(time),
             color = mood.contentColor,
             style = TextStyle(fontSize = MaterialTheme.typography.bodyMedium.fontSize)
         )
