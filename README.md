@@ -1,17 +1,52 @@
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="./readme-assets/screenshots/stev_logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+<h1 align = "center">
+<b><i>DiaryApp</i></b>
+</h1>
+
+  <p align="center">
+    Complete Multi-Modular Android App 
+    <br />
 
 
-## Screenshots
-# DiaryApp
+  
+[Screenshots](#camera_flash-screenshots-camera_flash) ~
+[Deployment](#inbox_tray-deployment-inbox_tray) ~
+[Architecture](#hammer_and_wrench-architecture-hammer_and_wrench) ~
+[API Reference](#electric_plug-api-reference-electric_plug) ~
+[Tech Stack](#gear-tech-stack-gear) ~
+[Authors](#black_nib-authors-black_nib) ~
+[Contributing](#passport_control-contributing-passport_control)  
+ 
+</div>
+    
+DiaryApp is a complete course project written in Kotlin and powered by Jetpack Compose. It incorpolates both Single and Multi-Modular approaches while the Data is handled by a MongoDB Sync and Firebase Combo.
 
-DiaryApp is a modern full course project written in Kotlin and powered by Jetpack Compose. It allows users to write and save diary entries with the option to include photos and expressive emojis to capture the essence of each moment. 
-The app incorpolates both Single and Multi-Modular
-The app follows the latest Material 3 design guidelines, offering a visually appealing and consistent user interface. The Data is handled by both MongoDB Synch and Firebase.  This project is a valuable resource for developers seeking to learn multi-modular architecture from scratch. 
+DiaryApp allows users to write and save diary entries with the option to include photos and expressive emojis to capture the essence of each moment. 
+
+This project is a valuable resource for developers seeking to learn multi-modular architecture from scratch. 
 
 Start your next Android chapter by buying [must have course](https://stevdza-san.com/p/multi-module-android-development-with-mongo-db-realm-sync)
 
 There are even [more courses for you here](https://stevdza-san.com/courses)
+
+
+
+# :camera_flash: **Screenshots** :camera_flash:
+
+DiaryApp follows the latest Material 3 guidelines for a visually appealing and consistent UI.
+
+<p align="center">
+<img img width="200" height="400" src="./readme-assets/screenshots/screen_1.png"> &nbsp;&nbsp;&nbsp;&nbsp;
+<img img width="200" height="400" src="./readme-assets/screenshots/screen_2.png"> &nbsp;&nbsp;&nbsp;&nbsp;   
+<img img width="200" height="400" src="./readme-assets/screenshots/screen_3.png"> &nbsp;&nbsp;&nbsp;&nbsp; 
+
+</p>
+
 
 
 ## Deployment
