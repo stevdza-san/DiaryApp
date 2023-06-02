@@ -15,12 +15,11 @@
 
   
 [Screenshots](#camera_flash-screenshots-camera_flash) ~
-[Deployment](#inbox_tray-deployment-inbox_tray) ~
-[Architecture](#hammer_and_wrench-architecture-hammer_and_wrench) ~
-[API Reference](#electric_plug-api-reference-electric_plug) ~
+[Deployment](#deployment) ~
+[Architecture](#architecture) ~
 [Tech Stack](#gear-tech-stack-gear) ~
-[Authors](#black_nib-authors-black_nib) ~
-[Contributing](#passport_control-contributing-passport_control)  
+[Authors](#authors) ~
+[Contributing](#camera_flash-screenshots-camera_flash)  
  
 </div>
     
@@ -116,11 +115,8 @@ The DiaryApp project uses many popular libraries and tools in the Android Ecosys
 * [StevDza-San's OneTapCompose](https://github.com/stevdza-san/OneTapCompose) - Animated Message Bar UI that can be wrapped around your screen content in order to display Error/Success messages in your app. It is adapted and optimized for use with Compose and Material 3 projects.
 
 ## Authors
-
 - [@stevdza-san](https://github.com/stevdza-san)
-
-<a href="https://ko-fi.com/stevdza_san" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
+  
 Do Reach Out :
 
   * [Twitter](https://twitter.com/StevdzaS)
@@ -131,18 +127,18 @@ Check out my online courses:
    [Online Courses](https://stevdza-san.com/)
 
 
+
+<a href="https://ko-fi.com/stevdza_san" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
 ## Contributing
 
 Contributions to make DiaryApp better are always welcome!
 
 If you are interested in seeing a particular feature implemented in this app, please open a new issue after which you can make a PR!
 
-![Alt](https://repobeats.axiom.co/api/embed/84dfd3cd94832805dbcaa3569ec855d19e5c9401.svg "Repobeats analytics image")
 
 
 ## License
-
-
 
 MIT License
 
