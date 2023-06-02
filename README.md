@@ -19,19 +19,19 @@
 [Architecture](#architecture) ~
 [Tech Stack](#gear-tech-stack-gear) ~
 [Authors](#authors) ~
-[Contributing](#camera_flash-screenshots-camera_flash)  
+[Contributing](#contributing)  
  
 </div>
     
-DiaryApp is a complete course project written in Kotlin and powered by Jetpack Compose. It incorpolates both Single and Multi-Modular approaches while the Data is handled by a MongoDB Sync and Firebase Combo.
-
 DiaryApp allows users to write and save diary entries with the option to include photos and expressive emojis to capture the essence of each moment. 
+
+DiaryApp is a complete course project written in Kotlin and powered by Jetpack Compose. It is a Single Module Project but with a [branch](https://github.com/stevdza-san/DiaryApp/tree/multi_module) that incorpolates the Multi-Modular approach. The Data part is handled by a Mongo-Firebase Combo.
 
 This project is a valuable resource for developers seeking to learn multi-modular architecture from scratch. 
 
-Start your next Android chapter by buying [must have course](https://stevdza-san.com/p/multi-module-android-development-with-mongo-db-realm-sync)
+Start your next Android chapter by grabing this [Loaded and Modern Android Course](https://stevdza-san.com/p/multi-module-android-development-with-mongo-db-realm-sync)
 
-There are even [more courses for you here](https://stevdza-san.com/courses)
+You can also browse and reward yourself with [more great courses ](https://stevdza-san.com/courses)
 
 
 # :camera_flash: **Screenshots** :camera_flash:
