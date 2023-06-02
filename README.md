@@ -35,7 +35,6 @@ Start your next Android chapter by buying [must have course](https://stevdza-san
 There are even [more courses for you here](https://stevdza-san.com/courses)
 
 
-
 # :camera_flash: **Screenshots** :camera_flash:
 
 DiaryApp follows the latest Material 3 guidelines for a visually appealing and consistent UI.
@@ -89,16 +88,12 @@ The app has : Screen destinations which use Compose Destination to manage naviga
 - **Write Feature**: The Write feature enables users to create new diary entries or modify existing ones. It offers a seamless and intuitive interface for users to capture and document their thoughts, emotions, and memories. With this feature, users have full control over their diary content, empowering them to personalize and customize their entries.
 
 
-
-
-
 By adopting a multi-modular architecture with layered features, the DiaryApp achieves a separation of concerns, enabling independent development and testing of specific functionalities. This architecture promotes code reusability, scalability, and maintainability, while providing a cohesive and enjoyable experience for users to manage and interact with their diaries.
 
-## Tech Stack
-This app is implemented using Clean Architecture MVVM Pattern. It features these other
-libraries mostily from Android Jetpack
+# :gear: Tech Stack :gear:
 
-### Technologies used:
+The DiaryApp project uses many popular libraries and tools in the Android Ecosystem:
+
 * [Jetpack Compose](https://developer.android.com/jetpack/compose) - modern toolkit for building native Android UI
 * [Android KTX](https://developer.android.com/kotlin/ktx) - helps to write more concise, idiomatic Kotlin code.
 
@@ -120,63 +115,9 @@ libraries mostily from Android Jetpack
 
 * [StevDza-San's OneTapCompose](https://github.com/stevdza-san/OneTapCompose) - Animated Message Bar UI that can be wrapped around your screen content in order to display Error/Success messages in your app. It is adapted and optimized for use with Compose and Material 3 projects.
 
-
-## API Reference
-Yummies fetches its data from [The Meal Db](https://www.themealdb.com/).
-You can find the API Documentation by following this [link](https://www.themealdb.com/api.php).
-
-### Base URL
-https://www.themealdb.com/api/json/v1/1/
-
-
-### You don't need an **API Key**
-
-### Search meal by name
-
-
-```http
-     @GET("search.php")
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `s` | `string` | **Optional**. The meal keyword to search |
-
-This interface function returns a MealsResponse DTO Object.
-
-### Data Points for Meal Item
-
-| Data Point  | Type         |
-|-------------|--------------|
-| id          | Int          |
-| name        | String       |
-| category    | String       |
-| origin      | String       |
-| directions  | String       |
-| imageUrl    | String       |
-| ingredients | List<String> |
-| units       | List<String> |
-### Search meal by name
-
-
-```http
-     @GET("categories.php")
-```
-
-This interface function takes no queries returns a CategoriesResponse DTO Object.
-
-
-### Data Points for Category Item
-
-| categoryId          | Int    |
-|---------------------|--------|
-| categoryType        | String |
-| categoryDescription | String |
-| categoryImageUrl    | String |
-|                     |        |
 ## Authors
 
-- [@Tonnie-Dev](https://github.com/stevdza-san)
+- [@stevdza-san](https://github.com/stevdza-san)
 
 <a href="https://ko-fi.com/stevdza_san" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
@@ -187,7 +128,7 @@ Do Reach Out :
   * [YouTube](https://www.youtube.com/c/StevdzaSan)
 
 Check out my online courses: 
-   *[Online Courses](https://stevdza-san.com/)
+   [Online Courses](https://stevdza-san.com/)
 
 
 ## Contributing
