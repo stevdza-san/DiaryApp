@@ -52,16 +52,47 @@ DiaryApp follows the latest Material 3 guidelines for a visually appealing and c
 ## Deployment
 These are the key parameters for Yummies
 
-| compileSdk     | 33     |
-|----------------|--------|
-| targetSdk      | 33     |
-| minSdk         | 21     |
-| composeVersion | 1.4.0  |
+| Parameter      | Value |
+|----------------|-------|
+| compileSdk     | 33    |
+| targetSdk      | 33    |
+| minSdk         | 21    |
+| composeVersion | 1.4.0 |
 | kotlinVersion  | 1.8.0 |
-
 You can clone the repository or download or download the Zip file [here](https://github.com/stevdza-san/DiaryApp)
 
+## Architecture
+<br />
+DiaryApp is initially implemented using Android Clean Architecture that follows the more familiar *Model-View-ViewModel* (MVVM) pattern.
 
+On the [second branch](https://github.com/stevdza-san/DiaryApp/tree/multi_module) the project is restructured into a Multi-Module Architecture using layered features for 
+
+for code reusability, maintainability, and scalability. Here's an overview of the app's architectural components:
+- **App Module**: This is the main module of the DiaryApp, whhich acts as the orchestrator of the different features and modules. It handles the navigation flow between the Authentication, Home, and the Write features, ensuring a cohesive and seamless user experience. The App Module integrates the dependencies from the feature modules and manages the overall lifecycle of the app.
+
+- **buildSrc**:The buildSrc module in the Android Diary App serves as a central location for managing project configuration and dependencies. This module allows for a streamlined and standardized setup of project configurations, build scripts, and dependencies, simplifying the build process and ensuring consistency across the app.
+
+- **Data Module**:The Data module in the Android Diary App is responsible for managing data storage and retrieval using both MongoDB and Room. It handles the setup and integration of Mongo Realm, allowing seamless connectivity to the MongoDB backend. The Data module provides functionalities for inserting, fetching, updating, and deleting diary entries in the MongoDB database, ensuring efficient and reliable data management. Additionally, it leverages Room, a local persistence library, to provide offline access and local caching of diary entries, enhancing the app's responsiveness and offline capabilities.
+
+- **Common/Core Modules**: The app includes two core modules: UI and Utils. The UI module contains common Compose functions, components, and UI-related code that are shared across different features. This module promotes code reuse and consistency in the app's user interface. The Utils module provides essential utilities such as model classes, connectivity observers, constants, string and drawable resources. It ensures a centralized and efficient management of commonly used resources and functionalities.
+
+The app has : Screen destinations which use Compose Destination to manage navigation.
+
+| :feature:auth                       | :feature:home                       | :feature:write                      |
+|-------------------------------------|-------------------------------------|-------------------------------------|
+| ![](./readme-assets/gifs/gif_1.gif) | ![](./readme-assets/gifs/gif_2.gif) | ![](./readme-assets/gifs/gif_3.gif) |
+
+- **Authentication Feature**: This feature focuses on user authentication and validation. It utilizes Google Sign-In to ensure that users can securely access their diary entries. By authenticating users, the app guarantees that only authorized individuals can interact with their personal diaries.
+
+- **Home Feature**: The Home feature is responsible for displaying and filtering diary entries based on the date. It provides a user-friendly interface to navigate through diary entries and quickly access specific dates. This feature enhances the user experience by organizing entries in a structured and intuitive manner.
+
+- **Write Feature**: The Write feature enables users to create new diary entries or modify existing ones. It offers a seamless and intuitive interface for users to capture and document their thoughts, emotions, and memories. With this feature, users have full control over their diary content, empowering them to personalize and customize their entries.
+
+
+
+
+
+By adopting a multi-modular architecture with layered features, the DiaryApp achieves a separation of concerns, enabling independent development and testing of specific functionalities. This architecture promotes code reusability, scalability, and maintainability, while providing a cohesive and enjoyable experience for users to manage and interact with their diaries.
 
 ## Tech Stack
 This app is implemented using Clean Architecture MVVM Pattern. It features these other
@@ -89,30 +120,7 @@ libraries mostily from Android Jetpack
 
 * [StevDza-San's OneTapCompose](https://github.com/stevdza-san/OneTapCompose) - Animated Message Bar UI that can be wrapped around your screen content in order to display Error/Success messages in your app. It is adapted and optimized for use with Compose and Material 3 projects.
 
-## Architecture
-<br />
-DiaryApp is initially implemented using Android Clean Architecture that follows the more familiar *Model-View-ViewModel* (MVVM) pattern.
 
-On the second branch the project is restructured into a Multi-Module Architecture using layered features for 
-
-for code reusability, maintainability, and scalability. Here's an overview of the app's architectural components:
-- **App Module**: This is the main module of the DiaryApp, whhich acts as the orchestrator of the different features and modules. It handles the navigation flow between the Authentication, Home, and the Write features, ensuring a cohesive and seamless user experience. The App Module integrates the dependencies from the feature modules and manages the overall lifecycle of the app.
-
-- **buildSrc**:The buildSrc module in the Android Diary App serves as a central location for managing project configuration and dependencies. This module allows for a streamlined and standardized setup of project configurations, build scripts, and dependencies, simplifying the build process and ensuring consistency across the app.
-
-- **Data Module**:The Data module in the Android Diary App is responsible for managing data storage and retrieval using both MongoDB and Room. It handles the setup and integration of Mongo Realm, allowing seamless connectivity to the MongoDB backend. The Data module provides functionalities for inserting, fetching, updating, and deleting diary entries in the MongoDB database, ensuring efficient and reliable data management. Additionally, it leverages Room, a local persistence library, to provide offline access and local caching of diary entries, enhancing the app's responsiveness and offline capabilities.
-
-- **Authentication Feature**: This feature focuses on user authentication and validation. It utilizes Google Sign-In to ensure that users can securely access their diary entries. By authenticating users, the app guarantees that only authorized individuals can interact with their personal diaries.
-
-- **Home Feature**: The Home feature is responsible for displaying and filtering diary entries based on the date. It provides a user-friendly interface to navigate through diary entries and quickly access specific dates. This feature enhances the user experience by organizing entries in a structured and intuitive manner.
-
-- **Write Feature**: The Write feature enables users to create new diary entries or modify existing ones. It offers a seamless and intuitive interface for users to capture and document their thoughts, emotions, and memories. With this feature, users have full control over their diary content, empowering them to personalize and customize their entries.
-
-- **Common/Core Modules**: The app includes two core modules: UI and Utils. The UI module contains common Compose functions, components, and UI-related code that are shared across different features. This module promotes code reuse and consistency in the app's user interface. The Utils module provides essential utilities such as model classes, connectivity observers, constants, string and drawable resources. It ensures a centralized and efficient management of commonly used resources and functionalities.
-
-
-
-By adopting a multi-modular architecture with layered features, the DiaryApp achieves a separation of concerns, enabling independent development and testing of specific functionalities. This architecture promotes code reusability, scalability, and maintainability, while providing a cohesive and enjoyable experience for users to manage and interact with their diaries.
 ## API Reference
 Yummies fetches its data from [The Meal Db](https://www.themealdb.com/).
 You can find the API Documentation by following this [link](https://www.themealdb.com/api.php).
