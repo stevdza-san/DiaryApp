@@ -20,7 +20,7 @@
 [Tech Stack](#gear-tech-stack-gear) ~
 [Authors](#memo-authors-memo) ~
 [Contributing](#handshake-contributing-handshake)  
-[Contributing](#scroll-license-scroll)  
+[License](#scroll-license-scroll)  
  
 </div>
     
@@ -48,7 +48,7 @@ DiaryApp follows the latest Material 3 guidelines for a visually appealing and a
 
 
 
-## :arrow_lower_right: Deployment :arrow_lower_right:
+# :arrow_lower_right: Deployment :arrow_lower_right:
 These are the key parameters for Yummies
 
 | Parameter      | Value |
@@ -61,7 +61,7 @@ These are the key parameters for Yummies
 
 You can clone the repository or download or download the Zip file [here](https://github.com/stevdza-san/DiaryApp)
 
-## :hammer_and_wrench: Architecture :hammer_and_wrench:
+# :hammer_and_wrench: Architecture :hammer_and_wrench:
 ### Modules
 
 DiaryApp is initially built using Android Clean Architecture that follows the more familiar   **Model-View-ViewModel** (MVVM) pattern.
@@ -133,14 +133,14 @@ Check out my online courses:
 
 <a href="https://ko-fi.com/stevdza_san" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-## :handshake: Contributing :handshake:
+# :handshake: Contributing :handshake:
 
 Contributions to make DiaryApp better are always welcome!
 
 If you are interested in seeing a particular feature implemented in this app, please open a new issue after which you can make a PR!
 
 
-## :scroll: License :scroll:
+# :scroll: License :scroll:
 
 MIT License
 
