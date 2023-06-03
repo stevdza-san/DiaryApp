@@ -15,11 +15,12 @@
 
   
 [Screenshots](#camera_flash-screenshots-camera_flash) ~
-[Deployment](#deployment) ~
-[Architecture](#architecture) ~
+[Deployment](#arrow_lower_right-deployment-arrow_lower_right) ~
+[Architecture](#hammer_and_wrench-architecture-hammer_and_wrench) ~
 [Tech Stack](#gear-tech-stack-gear) ~
-[Authors](#authors) ~
-[Contributing](#contributing)  
+[Authors](#memo-authors-memo) ~
+[Contributing](#handshake-contributing-handshake)  
+[Contributing](#scroll-license-scroll)  
  
 </div>
     
@@ -29,14 +30,14 @@ DiaryApp is a complete course project written in Kotlin and powered by Jetpack C
 
 This project is a valuable resource for developers seeking to learn multi-modular architecture from scratch. 
 
-Start your next Android chapter by grabing this [Loaded and Modern Android Course](https://stevdza-san.com/p/multi-module-android-development-with-mongo-db-realm-sync)
+Start your next Android chapter by grabing this [Loaded and Modern Android Course.](https://stevdza-san.com/p/multi-module-android-development-with-mongo-db-realm-sync)
 
 You can also browse and reward yourself with [more great courses ](https://stevdza-san.com/courses)
 
 
 # :camera_flash: **Screenshots** :camera_flash:
 
-DiaryApp follows the latest Material 3 guidelines for a visually appealing and consistent UI.
+DiaryApp follows the latest Material 3 guidelines for a visually appealing and a consistent UI.
 
 <p align="center">
 <img img width="200" height="400" src="./readme-assets/screenshots/screen_1.png"> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -47,7 +48,7 @@ DiaryApp follows the latest Material 3 guidelines for a visually appealing and c
 
 
 
-## Deployment
+## :arrow_lower_right: Deployment :arrow_lower_right:
 These are the key parameters for Yummies
 
 | Parameter      | Value |
@@ -57,24 +58,27 @@ These are the key parameters for Yummies
 | minSdk         | 21    |
 | composeVersion | 1.4.0 |
 | kotlinVersion  | 1.8.0 |
+
 You can clone the repository or download or download the Zip file [here](https://github.com/stevdza-san/DiaryApp)
 
-## Architecture
-<br />
-DiaryApp is initially implemented using Android Clean Architecture that follows the more familiar *Model-View-ViewModel* (MVVM) pattern.
+## :hammer_and_wrench: Architecture :hammer_and_wrench:
+### Modules
 
-On the [second branch](https://github.com/stevdza-san/DiaryApp/tree/multi_module) the project is restructured into a Multi-Module Architecture using layered features for 
+DiaryApp is initially built using Android Clean Architecture that follows the more familiar   **Model-View-ViewModel** (MVVM) pattern.
 
-for code reusability, maintainability, and scalability. Here's an overview of the app's architectural components:
+On the [second branch](https://github.com/stevdza-san/DiaryApp/tree/multi_module) the project is restructured into a Multi-Module Architecture using layered features.
+
+Here's an overview of the app's architectural modular components:
 - **App Module**: This is the main module of the DiaryApp, whhich acts as the orchestrator of the different features and modules. It handles the navigation flow between the Authentication, Home, and the Write features, ensuring a cohesive and seamless user experience. The App Module integrates the dependencies from the feature modules and manages the overall lifecycle of the app.
 
-- **buildSrc**:The buildSrc module in the Android Diary App serves as a central location for managing project configuration and dependencies. This module allows for a streamlined and standardized setup of project configurations, build scripts, and dependencies, simplifying the build process and ensuring consistency across the app.
+- **buildSrc**: The buildSrc module serves as a central location for managing project configuration and dependencies. This module allows for a streamlined and standardized setup of project configurations, build scripts, and dependencies, simplifying the build process and ensuring consistency across the app.
 
-- **Data Module**:The Data module in the Android Diary App is responsible for managing data storage and retrieval using both MongoDB and Room. It handles the setup and integration of Mongo Realm, allowing seamless connectivity to the MongoDB backend. The Data module provides functionalities for inserting, fetching, updating, and deleting diary entries in the MongoDB database, ensuring efficient and reliable data management. Additionally, it leverages Room, a local persistence library, to provide offline access and local caching of diary entries, enhancing the app's responsiveness and offline capabilities.
+- **Data Module**:The Data module in the Android Diary App is responsible for managing data storage and retrieval using both MongoDB and Room. It handles the setup and integration of Mongo Realm, allowing seamless connectivity to the MongoDB backend. The Data module provides functionalities for inserting, fetching, updating, and deleting diary entries in the MongoDB database. Additionally, DiaryApp leverages Room Librayto provide offline access and local caching of diary entries, enhancing the app's responsiveness and offline capabilities.
 
-- **Common/Core Modules**: The app includes two core modules: UI and Utils. The UI module contains common Compose functions, components, and UI-related code that are shared across different features. This module promotes code reuse and consistency in the app's user interface. The Utils module provides essential utilities such as model classes, connectivity observers, constants, string and drawable resources. It ensures a centralized and efficient management of commonly used resources and functionalities.
+- **Common/Core Modules**: The app includes two core modules: *UI* and *Utils*. The UI module contains common Compose functions, components, and UI-related code that are shared across different features. This module promotes code reuse and consistency in the app's user interface. The Utils module provides essential utilities such as model classes, connectivity observers, constants, strings and drawable resources. It ensures a centralized and efficient management of commonly used resources and functionalities.
 
-The app has : Screen destinations which use Compose Destination to manage navigation.
+### Navigation
+The app has :two: screen destinations which use Compose Navigation to manage navigation.
 
 | :feature:auth                       | :feature:home                       | :feature:write                      |
 |-------------------------------------|-------------------------------------|-------------------------------------|
@@ -82,18 +86,18 @@ The app has : Screen destinations which use Compose Destination to manage naviga
 
 - **Authentication Feature**: This feature focuses on user authentication and validation. It utilizes Google Sign-In to ensure that users can securely access their diary entries. By authenticating users, the app guarantees that only authorized individuals can interact with their personal diaries.
 
-- **Home Feature**: The Home feature is responsible for displaying and filtering diary entries based on the date. It provides a user-friendly interface to navigate through diary entries and quickly access specific dates. This feature enhances the user experience by organizing entries in a structured and intuitive manner.
+- **Home Feature**: The Home feature is responsible for displaying and filtering diary entries based on the date. It provides a user-friendly interface to navigate through diary entries and quickly filter diaries by specific dates. Additional selections can be accessed through the Navigation Drawer.
 
-- **Write Feature**: The Write feature enables users to create new diary entries or modify existing ones. It offers a seamless and intuitive interface for users to capture and document their thoughts, emotions, and memories. With this feature, users have full control over their diary content, empowering them to personalize and customize their entries.
+- **Write Feature**: The Write feature enables users to create new diary entries or modify existing ones. It offers a seamless and intuitive interface for users to capture and document their thoughts, moments, and memories. DiaryApp empowers the users to personalize content by adding emojis and accompanying images
 
 
-By adopting a multi-modular architecture with layered features, the DiaryApp achieves a separation of concerns, enabling independent development and testing of specific functionalities. This architecture promotes code reusability, scalability, and maintainability, while providing a cohesive and enjoyable experience for users to manage and interact with their diaries.
+Overroll by adopting a multi-modular architecture with layered features, the DiaryApp achieves a separation of concerns, enabling independent development and testing of specific functionalities. This architecture promotes code reusability, scalability and easy maintainability
 
 # :gear: Tech Stack :gear:
 
 The DiaryApp project uses many popular libraries and tools in the Android Ecosystem:
 
-* [Jetpack Compose](https://developer.android.com/jetpack/compose) - modern toolkit for building native Android UI
+* [Jetpack Compose](https://developer.android.com/jetpack/compose) - modern toolkit for building native Android UI.
 * [Android KTX](https://developer.android.com/kotlin/ktx) - helps to write more concise, idiomatic Kotlin code.
 
 * [Coroutines and Kotlin Flow](https://kotlinlang.org/docs/reference/coroutines-overview.html) - used to manage the local storage i.e. `writing to and reading from the database`. Coroutines help in managing background threads and reduces the need for callbacks.
@@ -114,7 +118,7 @@ The DiaryApp project uses many popular libraries and tools in the Android Ecosys
 
 * [StevDza-San's OneTapCompose](https://github.com/stevdza-san/OneTapCompose) - Animated Message Bar UI that can be wrapped around your screen content in order to display Error/Success messages in your app. It is adapted and optimized for use with Compose and Material 3 projects.
 
-## Authors
+# :memo: Authors :memo:
 - [@stevdza-san](https://github.com/stevdza-san)
   
 Do Reach Out :
@@ -127,18 +131,16 @@ Check out my online courses:
    [Online Courses](https://stevdza-san.com/)
 
 
-
 <a href="https://ko-fi.com/stevdza_san" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-## Contributing
+## :handshake: Contributing :handshake:
 
 Contributions to make DiaryApp better are always welcome!
 
 If you are interested in seeing a particular feature implemented in this app, please open a new issue after which you can make a PR!
 
 
-
-## License
+## :scroll: License :scroll:
 
 MIT License
 
@@ -161,4 +163,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
