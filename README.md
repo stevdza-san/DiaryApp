@@ -17,7 +17,7 @@
 [Screenshots](#camera_flash-screenshots-camera_flash) ~
 [Deployment](#arrow_lower_right-deployment-arrow_lower_right) ~
 [Architecture](#hammer_and_wrench-architecture-hammer_and_wrench) ~
-[Tech Stack](#gear-tech-stack-gear) ~
+[Tech Stack](#building_construction-tech-stack-building_construction) ~
 [Authors](#memo-authors-memo) ~
 [Contributing](#handshake-contributing-handshake)  
 [License](#scroll-license-scroll)  
@@ -49,7 +49,7 @@ DiaryApp follows the latest Material 3 guidelines for a visually appealing and a
 
 
 # :arrow_lower_right: Deployment :arrow_lower_right:
-These are the key parameters for Yummies
+These are the key parameters for DiaryApp.
 
 | Parameter      | Value |
 |----------------|-------|
@@ -59,8 +59,9 @@ These are the key parameters for Yummies
 | composeVersion | 1.4.0 |
 | kotlinVersion  | 1.8.0 |
 
-You can clone the repository or download or download the Zip file [here](https://github.com/stevdza-san/DiaryApp)
+You can clone the repository or download the Zip file [here](https://github.com/stevdza-san/DiaryApp)
 
+To build and run the app, you will need the latest version of Android Studio Flamingo (or [newer](https://developer.android.com/studio/)) installed on your system.
 # :hammer_and_wrench: Architecture :hammer_and_wrench:
 ### Modules
 
@@ -78,7 +79,7 @@ Here's an overview of the app's architectural modular components:
 - **Common/Core Modules**: The app includes two core modules: *UI* and *Utils*. The UI module contains common Compose functions, components, and UI-related code that are shared across different features. This module promotes code reuse and consistency in the app's user interface. The Utils module provides essential utilities such as model classes, connectivity observers, constants, strings and drawable resources. It ensures a centralized and efficient management of commonly used resources and functionalities.
 
 ### Navigation
-The app has :two: screen destinations which use Compose Navigation to manage navigation.
+The app has :three: screen destinations which use Compose Navigation to manage navigation.
 
 | :feature:auth                       | :feature:home                       | :feature:write                      |
 |-------------------------------------|-------------------------------------|-------------------------------------|
@@ -93,7 +94,7 @@ The app has :two: screen destinations which use Compose Navigation to manage nav
 
 Overroll by adopting a multi-modular architecture with layered features, the DiaryApp achieves a separation of concerns, enabling independent development and testing of specific functionalities. This architecture promotes code reusability, scalability and easy maintainability
 
-# :gear: Tech Stack :gear:
+# :building_construction: Tech Stack :building_construction:
 
 The DiaryApp project uses many popular libraries and tools in the Android Ecosystem:
 
@@ -102,7 +103,7 @@ The DiaryApp project uses many popular libraries and tools in the Android Ecosys
 
 * [Coroutines and Kotlin Flow](https://kotlinlang.org/docs/reference/coroutines-overview.html) - used to manage the local storage i.e. `writing to and reading from the database`. Coroutines help in managing background threads and reduces the need for callbacks.
 * [Material Design 3](https://m3.material.io/) - an adaptable system of guidelines, components, and tools that support the best practices of user interface design.
-* [Compose Navigation](https://developer.android.com/jetpack/compose/navigation) - used to handle all navigations and arguments passing while hiding the complex, non-type-safe and boilerplate code
+* [Compose Navigation](https://developer.android.com/jetpack/compose/navigation) - navigate between composables while taking advantage of the stateful NavController which keeps track of the back stack of composables that make up the screens in your app. 
 * [Google Accompanist Libraries](https://github.com/google/accompanist) - these are a collection of extension libraries for Jetpack Compose. DiaryApp specifically uses Accompanist's Pager Library
 * [Dagger Hilt](https://dagger.dev/hilt/) - used for Dependency Injection.
 * [Coil](https://coil-kt.github.io/coil/) - an image loading library for Android backed by Kotlin Coroutines
