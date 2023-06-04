@@ -51,7 +51,7 @@ DiaryApp follows the latest Material 3 guidelines for a visually appealing and a
 # :arrow_lower_right: Deployment :arrow_lower_right:
 These are the key parameters for DiaryApp.
 
-| Parameter      | Value |
+| Parameters     | Value |
 |----------------|-------|
 | compileSdk     | 33    |
 | targetSdk      | 33    |
