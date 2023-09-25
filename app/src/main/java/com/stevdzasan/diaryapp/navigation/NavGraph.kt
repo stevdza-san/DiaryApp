@@ -3,6 +3,8 @@ package com.stevdzasan.diaryapp.navigation
 import android.os.Build
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
@@ -14,8 +16,6 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.google.accompanist.pager.ExperimentalPagerApi
-import com.google.accompanist.pager.rememberPagerState
 import com.stevdzasan.diaryapp.model.Mood
 import com.stevdzasan.diaryapp.model.RequestState
 import com.stevdzasan.diaryapp.presentation.components.DisplayAlertDialog
@@ -216,7 +216,7 @@ fun NavGraphBuilder.homeRoute(
     }
 }
 
-@OptIn(ExperimentalPagerApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 fun NavGraphBuilder.writeRoute(navigateBack: () -> Unit) {
     composable(
         route = Screen.Write.route,
@@ -230,7 +230,7 @@ fun NavGraphBuilder.writeRoute(navigateBack: () -> Unit) {
         val context = LocalContext.current
         val uiState = viewModel.uiState
         val galleryState = viewModel.galleryState
-        val pagerState = rememberPagerState()
+        val pagerState = rememberPagerState(pageCount = { Mood.values().size })
         val pageNumber by remember { derivedStateOf { pagerState.currentPage } }
 
         WriteScreen(
