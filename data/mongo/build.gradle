@@ -1,7 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
+//    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
     id 'io.realm.kotlin'
 }
 
@@ -42,7 +43,7 @@ dependencies {
 
     implementation libs.room.runtime
     implementation libs.room.ktx
-    kapt libs.room.compiler
+    ksp libs.room.compiler
 
     implementation(project(":core:util"))
 }

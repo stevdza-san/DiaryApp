@@ -1,7 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
+//    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
     id 'dagger.hilt.android.plugin'
     id 'io.realm.kotlin'
     id 'com.google.gms.google-services'
@@ -56,25 +57,25 @@ dependencies {
     implementation libs.navigation.compose
 
     // Firebase
-    implementation 'com.google.firebase:firebase-storage-ktx:20.1.0'
+    implementation libs.firebase.storage
 
     // Room components
-    implementation "androidx.room:room-runtime:2.5.1"
-    kapt "androidx.room:room-compiler:2.5.1"
-    implementation "androidx.room:room-ktx:2.5.1"
+    implementation libs.room.runtime
+    ksp libs.room.compiler
+    implementation libs.room.ktx
 
     // Splash API
-    implementation "androidx.core:core-splashscreen:1.0.0"
+    implementation libs.splash.api
 
     // Mongo DB Realm
-    implementation "io.realm.kotlin:library-sync:1.7.0"
+    implementation libs.realm.sync
 
     // Dagger Hilt
-    implementation "com.google.dagger:hilt-android:2.44.2"
-    kapt "com.google.dagger:hilt-compiler:2.44.2"
+    implementation libs.hilt.android
+    ksp libs.hilt.compiler
 
     // Desugar JDK
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.0'
+    coreLibraryDesugaring libs.desugar.jdk
 
     implementation(project(":core:ui"))
     implementation(project(":core:util"))

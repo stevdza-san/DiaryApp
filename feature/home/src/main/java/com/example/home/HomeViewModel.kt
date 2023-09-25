@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.debounce
 import java.time.ZonedDateTime
 import javax.inject.Inject
 
@@ -50,12 +51,13 @@ internal class HomeViewModel @Inject constructor(
         }
     }
 
+    @OptIn(FlowPreview::class)
     private fun observeAllDiaries() {
         allDiariesJob = viewModelScope.launch {
             if (::filteredDiariesJob.isInitialized) {
                 filteredDiariesJob.cancelAndJoin()
             }
-            MongoDB.getAllDiaries().collect { result ->
+            MongoDB.getAllDiaries().debounce(2000).collect { result ->
                 diaries.value = result
             }
         }

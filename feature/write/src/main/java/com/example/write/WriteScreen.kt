@@ -3,8 +3,10 @@ package com.example.write
 import android.annotation.SuppressLint
 import android.net.Uri
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.pager.PagerState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
@@ -22,13 +24,11 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.ui.GalleryImage
 import com.example.ui.GalleryState
-import com.google.accompanist.pager.ExperimentalPagerApi
-import com.google.accompanist.pager.PagerState
 import com.example.util.model.Diary
 import com.example.util.model.Mood
 import java.time.ZonedDateTime
 
-@OptIn(ExperimentalPagerApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 internal fun WriteScreen(
@@ -100,9 +100,9 @@ internal fun ZoomableImage(
     onCloseClicked: () -> Unit,
     onDeleteClicked: () -> Unit
 ) {
-    var offsetX by remember { mutableStateOf(0f) }
-    var offsetY by remember { mutableStateOf(0f) }
-    var scale by remember { mutableStateOf(1f) }
+    var offsetX by remember { mutableFloatStateOf(0f) }
+    var offsetY by remember { mutableFloatStateOf(0f) }
+    var scale by remember { mutableFloatStateOf(1f) }
     Box(
         modifier = Modifier
             .pointerInput(Unit) {

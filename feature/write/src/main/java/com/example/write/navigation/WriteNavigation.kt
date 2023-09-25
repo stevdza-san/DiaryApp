@@ -1,6 +1,8 @@
 package com.example.write.navigation
 
 import android.widget.Toast
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -15,10 +17,8 @@ import com.example.util.Screen
 import com.example.util.model.Mood
 import com.example.write.WriteScreen
 import com.example.write.WriteViewModel
-import com.google.accompanist.pager.ExperimentalPagerApi
-import com.google.accompanist.pager.rememberPagerState
 
-@OptIn(ExperimentalPagerApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 fun NavGraphBuilder.writeRoute(navigateBack: () -> Unit) {
     composable(
         route = Screen.Write.route,
@@ -32,7 +32,7 @@ fun NavGraphBuilder.writeRoute(navigateBack: () -> Unit) {
         val context = LocalContext.current
         val uiState = viewModel.uiState
         val galleryState = viewModel.galleryState
-        val pagerState = rememberPagerState()
+        val pagerState = rememberPagerState(pageCount = { Mood.values().size })
         val pageNumber by remember { derivedStateOf { pagerState.currentPage } }
 
         WriteScreen(

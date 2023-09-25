@@ -2,7 +2,8 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'io.realm.kotlin'
-    id 'kotlin-kapt'
+//    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
     id 'dagger.hilt.android.plugin'
 }
 
@@ -49,7 +50,7 @@ dependencies {
     implementation libs.coroutines.core
     implementation libs.realm.sync
     implementation libs.hilt.android
-    kapt libs.hilt.compiler
+    ksp libs.hilt.compiler
     implementation libs.hilt.navigation.compose
     implementation libs.compose.tooling.preview
     implementation libs.date.time.picker
